@@ -1,0 +1,61 @@
+[multistep multistep-form first_step "http://localhost:800/ultranmn/form-payment/"]
+
+<span class="p-country-name" style="display:none;">Japan</span>
+
+<dl class="contact-dl">
+     <div>
+         <dt class="contact-label">お名前<span class="contact-required">必須</span></dt>
+         <dd class="contact-input">[text* your-name placeholder "例）山田太郎"]</dd>
+      </div>
+      <div>
+         <dt class="contact-label">お名前フリガナ<span class="contact-required">必須</span></dt>
+         <dd class="contact-input">[text* your-hiragana placeholder "例）ヤマダタロウ"]</dd>
+      </div>
+      <div>
+          <dt class="contact-label">メールアドレス<span class="contact-required">必須</span></dt>
+          <dd class="contact-input">
+              [email* your-email placeholder "text@example.com"]<span>メールアドレスをお間違えのないよう、正確にご入力ください。</span>
+          </dd>
+      </div>
+      <div>
+          <dt class="contact-label">郵便番号<span class="contact-required">必須</span></dt>
+          <dd class="contact-input">[text* your-zip-code class:post-input class:p-postal-code]<button class="post-button">住所入力</button><span>住所から郵便番号を検索する場合は<a href="">こちら</a></span>
+          </dd>
+      </div>
+      <div>
+          <dt class="contact-label">住所</dt>
+          <dd class="contact-input">
+            [select your-region class:p-region-id "都道府県" "北海道" "青森県" "岩手県" "宮城県" "秋田県" "山形県" "福島県" "茨城県" "栃木県" "群馬県" "埼玉県" "千葉県" "東京都" "神奈川県" "新潟県" "富山県" "石川県" "福井県" "山梨県" "長野県" "岐阜県" "静岡県" "愛知県" "三重県" "滋賀県" "京都府" "大阪府" "兵庫県" "奈良県" "和歌山県" "鳥取県" "島根県" "岡山県" "広島県" "山口県" "徳島県" "香川県" "愛媛県" "高知県" "福岡県" "佐賀県" "長崎県" "熊本県" "大分県" "宮崎県" "鹿児島県" "沖縄県"][text your-p-locality class:p-locality class:address-city placeholder "市区町村"][text your-p-locality class:p-street-address class:p-extended-address placeholder "それ以降の住所"]<span class="adreess-span">※マンション・アパート名は必ず入力してください。</span><span>※入力されている住所が勤務先の場合は「会社名・部署名」なども入力してください。</span>
+           </dd>
+      </div>
+      <div>
+          <dt class="contact-label contact-label-address">お届け先の入力</dt>
+          <dd class="contact-input contact-radio">
+              [radio your-radio use_label_element default:1 "注文者の住所にお届けする" "注文者の情報を元にお届け先を編集する" "新しいお届け先を入力する"]
+           </dd>
+      </div>
+</dl>
+<div class="contact-agreement">
+      <div>
+           <h3>モニター調査へのご協力のお願い</h3>
+           <p class="agreement-description">ご使用後（ご購入から約1ヶ月後）、お電話にて5分程、ご感想を伺う予定です。尚、メールアドレス宛にお送りする、同等のオンライン調査にご回答いただいた際にはお電話は差し上げません。</p>
+       </div>
+       <dl class="contact-dl">
+             <div>
+                 <dt class="contact-label">電話番号<span class="contact-required">必須</span></dt>
+                 <dd class="contact-input">[tel* your-name-1 class:agreement-number]-[tel* your-name-2 class:agreement-number]-[tel* your-name-3 class:agreement-number]<span>※モニター調査以外の用途での電話は一切差し上げません。</span>
+                 </dd>
+              </div>
+              <div>
+                  <dt class="contact-label">電話可能な時間帯<span class="contact-required">必須</span></dt>
+                  <dd class="contact-input">[text* your-available placeholder "例）月・金の15時から17時"]</dd>
+              </div>
+        </dl>
+</div>
+<div class="contact-send">
+     [submit "決済情報登録へ"]
+</div>
+
+
+
+-------------------------------------------------------------------------------
