@@ -32,8 +32,8 @@
                             </div>
                             <div class="mv-upsell">
                                 <p>参加を迷われている方は</p>
-                                <div class="mv-bookmark">
-                                    <a href="">お気に入りに登録</a>
+                                <div class="mv-bookmark" >
+                                    <a onclick="myFunction(); return false;" id="bookmarkme" href="javascript:void(0)" rel="sidebar" title="bookmark this page">お気に入りに登録</a>
                                 </div>
                             </div>
                         </div>

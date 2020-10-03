@@ -17,8 +17,8 @@
             <?php if(!is_page()):?>
                 <nav class="header-nav">
                     <ul class="header-list">
-                        <li class="header-item"><a href="">先着100名様限定のモニターに参加する</a></li>
-                        <li class="header-item"><a href="">お気に入りに登録</a></li>
+                        <li class="header-item"><a href="http://localhost:800/ultranmn/?page_id=20">先着100名様限定のモニターに参加する</a></li>
+                        <li class="header-item"><a onclick="myFunction(); return false;" id="bookmarkme" href="javascript:void(0)" rel="sidebar" title="bookmark this page">お気に入りに登録</a></li>
                     </ul>
                 </nav>
             <?php endif;?>

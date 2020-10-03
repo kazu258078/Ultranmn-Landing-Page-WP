@@ -22,9 +22,8 @@ function my_script_init()
 { 
     if(is_page()){
       wp_enqueue_style('page-css', get_template_directory_uri() . '/page.css', array(), '1.0.0', 'all');
-      wp_enqueue_script('js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.0.0', true);
     }
-    
+    wp_enqueue_script('js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '1.0.0', true);
     wp_enqueue_style('css', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
     wp_enqueue_script('yubinbango','https://yubinbango.github.io/yubinbango/yubinbango.js',array(),false,true );
     // wp_enqueue_style('highlightjs', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/tomorrow-night-eighties.min.css', array(), '9.17.1', 'all');
