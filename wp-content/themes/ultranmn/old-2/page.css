@@ -263,7 +263,7 @@ input.agreement-number{
     margin-top: 80.5px;
 }
 
-.contact-send input[type="button"] {
+.contact-send input[type="submit"] {
     background-color: #fff;
     color: rgba(175,178,187);
     display: inline-block;

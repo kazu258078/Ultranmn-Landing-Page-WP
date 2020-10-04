@@ -1,0 +1,33 @@
+<div class="contact-agreement">
+     <h3>モニター調査へのご協力のお願い</h3>
+     <dl class="contact-dl">
+     <div>
+        <div class="checkbox-error"></div>
+        <dt class="contact-label contact-label-input">
+             <label>[checkbox your-checkbox "必須"]</label> 
+        </dt>
+        <dd class="contact-input agreement-description">ご使用後（ご購入から約1ヶ月後）、お電話にて5分程、ご感想を伺う予定です。尚、メールアドレス宛にお送りする、同等のオンライン調査にご回答いただいた際にはお電話は差し上げません。</dd>
+     </div>
+     <div>
+        <div id="contact-label-pc">
+             <dt class="contact-label"></dt><dd class="contact-input"><div class="tel-error"></div></dd></div>
+             <dt class="contact-label">電話番号<span class="contact-required">必須</span></dt>
+             <div id="contact-label-sp">
+                 <dt class="contact-label"></dt><dd class="contact-input"><div class="tel-error"></div></dd>
+             </div>
+             <dd class="contact-input">
+                  [number* num1 id:tel-1 class:agreement-number placeholder]<span class="tel-hyphen">-</span>[number* num2 id:tel-2 class:agreement-number placeholder]<span class="tel-hyphen">-</span>[number* num3 id:tel-3 class:agreement-number placeholder]<span class="monitor-warning">※モニター調査以外の用途での電話は一切差し上げません。</span>
+             </dd>
+         </div>
+         <div>
+              <dt class="contact-label">電話可能な時間帯</dt>
+              <dd class="contact-input">[text your-availability placeholder "例）月・金の15時から17時"]</dd>
+         </div>
+　　　　　[hidden current-date]
+         </dl>
+</div>               
+<div class="contact-send">
+      <input type="button" class="submit-form" value="お申込み情報登録へ"/>
+</div>
+
+<div id='product-component-1599108119609'></div>

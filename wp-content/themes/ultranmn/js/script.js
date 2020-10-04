@@ -171,7 +171,7 @@
 
 jQuery(document).ready(function() {
     shopify_dispaly()
-    jQuery('.contact-send input[type="submit"]').prop("disabled", true);
+    jQuery('.contact-send input[type="button"]').prop("disabled", true);
     jQuery('.checkbox-error').text("チェックボタンをクリックしてください。");
     var tel_value_1 = false;
     var tel_value_2 = false;
@@ -250,14 +250,14 @@ jQuery(document).ready(function() {
           tel_3 = false
         }
         if(tel_1 == false && tel_2 == false && tel_value_3 == false){
-          jQuery('.contact-send input[type="submit"]').prop("disabled", true);
+          jQuery('.contact-send input[type="button"]').prop("disabled", true);
         }else{
           tel_validatoin(tel_1, tel_2, tel_3);
         }
       }else{
         jQuery("#check-style").remove()
         jQuery('.checkbox-error').css("visibility","visible");;
-        jQuery('.contact-send input[type="submit"]').prop("disabled", true);
+        jQuery('.contact-send input[type="button"]').prop("disabled", true);
         jQuery(".contact-send input").css({
           "background-color":"#fff",
           "color":"rgba(175,178,187)",
@@ -266,9 +266,20 @@ jQuery(document).ready(function() {
       
 
 
-      jQuery(".wpcf7-form").on("submit", function(){
+      jQuery(".submit-form").on("click", function(e){
+        var now = new Date();
+        var y = now.getFullYear();
+        var m = now.getMonth() + 1;
+        var d = now.getDate();
+        var w = now.getDay();
+        var wd = ['日', '月', '火', '水', '木', '金', '土'];
+        var h = now.getHours();
+        var mi = now.getMinutes();
+        var s = now.getSeconds();
+        jQuery(".wpcf7-hidden").val(y + '年' + m + '月' + d + '日' + h + '時' + mi + '分' + s + '秒' + '(' + wd[w] + ')');
         var buy_btn = jQuery("iframe").contents().find(".shopify-buy__btn");
-        buy_btn.trigger("click")
+        jQuery(".wpcf7-form").submit();
+        buy_btn.trigger("click");
       });
 
     })
@@ -322,7 +333,7 @@ function tel_validatoin(tel_1, tel_2, tel_3){
     }
   } else {
       jQuery('.tel-error').text("無効な電話番号です。");
-      jQuery('.contact-send input[type="submit"]').prop("disabled", true);
+      jQuery('.contact-send input[type="button"]').prop("disabled", true);
       jQuery(".contact-send input").css({
         "background-color":"#fff",
         "color":"rgba(175,178,187)",
@@ -332,10 +343,10 @@ function tel_validatoin(tel_1, tel_2, tel_3){
 
 function checkbox_validatoin(){
   if(jQuery("input[type='checkbox']").is(":checked")){
-    jQuery('.contact-send input[type="submit"]').prop("disabled", false);
+    jQuery('.contact-send input[type="button"]').prop("disabled", false);
     return true
   }else{
-    jQuery('.contact-send input[type="submit"]').prop("disabled", true);
+    jQuery('.contact-send input[type="button"]').prop("disabled", true);
     return false
   }
 }
